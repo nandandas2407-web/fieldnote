@@ -12,6 +12,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -26,6 +27,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.fieldnote.FieldnoteApp
 import app.fieldnote.core.*
+import app.fieldnote.data.StudySession
+import app.fieldnote.data.Subject
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -196,7 +199,7 @@ fun HoldButton(text: String, holdMs: Long, onDone: () -> Unit) {
 }
 
 @Composable
-fun RecentSessions(app: FieldnoteApp, list: List<app.fieldnote.data.StudySession>) {
+fun RecentSessions(app: FieldnoteApp, list: List<StudySession>) {
     Panel(title = "Recent sessions") {
         if (list.isEmpty()) {
             EmptyState("No sessions yet", "Finished sessions appear here and feed every chart in Analytics.")
@@ -241,7 +244,7 @@ fun AddSubjectDialog(app: FieldnoteApp, onClose: () -> Unit) {
         },
         confirmButton = {
             TextButton(onClick = {
-                if (name.isNotBlank()) app.io { app.db.subjectDao().insert(app.fieldnote.data.Subject(name = name.trim(), color = Color(FN.SubjectColors[color]).toArgb())) }
+                if (name.isNotBlank()) app.io { app.db.subjectDao().insert(Subject(name = name.trim(), color = Color(FN.SubjectColors[color]).toArgb())) }
                 onClose()
             }) { Text("Add", color = FN.Accent) }
         },

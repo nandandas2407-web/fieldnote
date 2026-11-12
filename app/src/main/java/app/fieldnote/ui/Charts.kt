@@ -166,8 +166,9 @@ fun RegularityChart(points: List<Pair<Int, Int>?>, startLabel: String, endLabel:
 
 @Composable
 fun MonthHeat(
-    month: YearMonth, byDay: Map<LocalDate, Long>, selected: LocalDate?, onSelect: (LocalDate) -> Unit,
-    modifier: Modifier = Modifier
+    month: YearMonth, byDay: Map<LocalDate, Long>, selected: LocalDate?,
+    modifier: Modifier = Modifier,
+    onSelect: (LocalDate) -> Unit
 ) {
     val first = month.atDay(1)
     val lead = first.dayOfWeek.value - 1
