@@ -218,7 +218,7 @@ Ideas, bug reports and pull requests are welcome.
 
 ## License
 
-Released under the [MIT License](LICENSE).
+Released under the [APACHE 2.0](LICENSE).
 
 <div align="center">
 <sub>Made for people who study seriously.</sub>
