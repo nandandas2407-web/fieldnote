@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Fieldnote</string>
+    <string name="widget_focus_desc">Today\'s focus time, goal progress and a start/pause button.</string>
+    <string name="widget_streak_desc">Your current study streak and today\'s progress.</string>
+</resources>

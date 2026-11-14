@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="fn_bg">#011207</color>
+    <style name="Theme.Fieldnote" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/fn_bg</item>
+        <item name="android:statusBarColor">@color/fn_bg</item>
+        <item name="android:navigationBarColor">@color/fn_bg</item>
+        <item name="android:colorBackground">@color/fn_bg</item>
+    </style>
+</resources>
